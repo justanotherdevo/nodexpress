@@ -35,7 +35,7 @@ app.get('/products/:id', (req, res) => {
     res.json(getProductById(parseInt(req.params.id)));
 });
 
-const server = app.listen(8000, "localhost", () => {
+const server = app.listen(8000, "https://nodexpresswebapi.azurewebsites.net/", () => {
     const {address, port} = server.address();
     console.log('Listening on %s %s', address, port);
 });
